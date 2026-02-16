@@ -4,23 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shagun Bhatia | Full Stack App Developer</title>
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Smooth Page Fade -->
   <style>
     body {
       opacity: 0;
       transition: opacity 0.6s ease-in;
     }
   </style>
-
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Shagun Bhatia</h1>
     <p>Full Stack App Developer | Android | iOS | Backend | Admin Panel</p>
   </header>
 
+  <!-- ABOUT -->
   <section>
     <h2>About Me</h2>
     <p>
@@ -30,6 +35,7 @@
     </p>
   </section>
 
+  <!-- SERVICES -->
   <section>
     <h2>Services</h2>
     <ul>
@@ -41,6 +47,7 @@
     </ul>
   </section>
 
+  <!-- PROJECTS -->
   <section>
     <h2>Projects</h2>
 
@@ -64,22 +71,30 @@
 
   </section>
 
+  <!-- CONTACT -->
   <section>
     <h2>Contact</h2>
-    <p>Email: shagunbhatia98@gmail.com</p>
+    <p>Email: <a href="mailto:shagunbhatia98@gmail.com">shagunbhatia98@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/Shaggy-111" target="_blank">github.com/Shaggy-111</a></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Shagun Bhatia</p>
   </footer>
 
+  <!-- WHATSAPP FLOAT BUTTON -->
   <a href="https://wa.me/917067335518" target="_blank" class="whatsapp-btn">
-  💬 Chat on WhatsApp
-</a>
+    💬 Chat on WhatsApp
+  </a>
 
   <!-- JS -->
-  <script src="script.js"></script>
+  <script>
+    // Smooth page fade-in
+    window.onload = () => {
+      document.body.style.opacity = "1";
+    };
+  </script>
 
 </body>
 </html>
