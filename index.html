@@ -5,96 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shagun Bhatia | Full Stack App Developer</title>
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Smooth Page Fade -->
   <style>
     body {
       opacity: 0;
       transition: opacity 0.6s ease-in;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .project-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 380px;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .gallery img {
+      width: 150px;
+      margin: 8px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Shagun Bhatia</h1>
-    <p>Full Stack App Developer | Android | iOS | Backend | Admin Panel</p>
-  </header>
+<header>
+  <h1>Shagun Bhatia</h1>
+  <p>Full Stack App Developer | Android | iOS | Backend | Admin Panel</p>
+</header>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I build complete mobile and web solutions for startups and businesses.
-      I specialize in Android, iOS, Backend APIs, and Admin Portals.
-      Available for freelance app and web development projects.
-    </p>
-  </section>
+<section>
+  <h2>About Me</h2>
+  <p>
+    I build complete mobile and web solutions for startups and businesses.
+    Specialized in Android, iOS, Backend APIs, Admin Panels, and full-stack systems.
+    I focus on real-world scalable solutions that help businesses automate operations and grow faster.
+  </p>
+</section>
 
-  <!-- SERVICES -->
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>Mobile App Development (Android & iOS)</li>
-      <li>Web Admin Panels & Dashboards</li>
-      <li>Backend API Development</li>
-      <li>Full Stack Business Applications</li>
-      <li>App Maintenance & Upgrades</li>
-    </ul>
-  </section>
+<section>
+  <h2>Services</h2>
+  <ul>
+    <li>Mobile App Development (Android & iOS)</li>
+    <li>Admin Panels & Dashboards</li>
+    <li>Backend API Development</li>
+    <li>Full Stack Business Applications</li>
+    <li>App Maintenance & Upgrades</li>
+  </ul>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
+<section>
+  <h2>Projects</h2>
 
-    <div class="project">
-      <h3>AquaTrack Mobile App</h3>
-      <p>Water delivery system with order and delivery management.</p>
-      <a href="https://github.com/Shaggy-111/aquatrack-mobile-app" target="_blank">View Project</a>
+  <!-- AquaTrack Mobile -->
+  <div class="project-box">
+    <h3>AquaTrack Mobile App</h3>
+    <p>Complete water delivery management system with customer, admin, and delivery modules.</p>
+
+    <h4>🎥 Live Demo</h4>
+    <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview" allow="autoplay"></iframe>
+
+    <h4>📸 Screenshots</h4>
+    <div class="gallery">
+      <img src="projects/aquatrack/screenshots/1.png">
+      <img src="projects/aquatrack/screenshots/2.png">
+      <img src="projects/aquatrack/screenshots/3.png">
     </div>
 
-    <div class="project">
-      <h3>AquaTrack Admin Portal</h3>
-      <p>Admin dashboard to manage orders, customers, and operations.</p>
-      <a href="https://github.com/Shaggy-111/aquatrack-admin-portal" target="_blank">View Project</a>
+    <p><a href="https://github.com/Shaggy-111/aquatrack-mobile-app" target="_blank">View Technical Details</a></p>
+  </div>
+
+  <!-- Admin Portal -->
+  <div class="project-box">
+    <h3>AquaTrack Admin Portal</h3>
+    <p>Web admin dashboard to manage customers, orders, delivery operations, and reports.</p>
+
+    <h4>📸 Screenshots</h4>
+    <div class="gallery">
+      <img src="projects/admin/screenshots/1.png">
+      <img src="projects/admin/screenshots/2.png">
+      <img src="projects/admin/screenshots/3.png">
     </div>
+  </div>
 
-    <div class="project">
-      <h3>Solar Solution Mobile App</h3>
-      <p>Solar survey and system planning mobile application.</p>
-      <a href="https://github.com/Shaggy-111/solar-solution-mobile-app" target="_blank">View Project</a>
+  <!-- Solar App -->
+  <div class="project-box">
+    <h3>Solar Solution Mobile App</h3>
+    <p>Mobile application for solar survey, system calculation, and installation planning.</p>
+
+    <h4>📸 Screenshots</h4>
+    <div class="gallery">
+      <img src="projects/solar/screenshots/1.png">
+      <img src="projects/solar/screenshots/2.png">
+      <img src="projects/solar/screenshots/3.png">
     </div>
+  </div>
 
-  </section>
+</section>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:shagunbhatia98@gmail.com">shagunbhatia98@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Shaggy-111" target="_blank">github.com/Shaggy-111</a></p>
-  </section>
+<section>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:shagunbhatia98@gmail.com">shagunbhatia98@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/Shaggy-111" target="_blank">github.com/Shaggy-111</a></p>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Shagun Bhatia</p>
-  </footer>
+<footer>
+  <p>© 2026 Shagun Bhatia</p>
+</footer>
 
-  <!-- WHATSAPP FLOAT BUTTON -->
-  <a href="https://wa.me/917067335518" target="_blank" class="whatsapp-btn">
-    💬 Chat on WhatsApp
-  </a>
+<a href="https://wa.me/917067335518" target="_blank" class="whatsapp-btn">
+  💬 Chat on WhatsApp
+</a>
 
-  <!-- JS -->
-  <script>
-    // Smooth page fade-in
-    window.onload = () => {
-      document.body.style.opacity = "1";
-    };
-  </script>
+<script>
+  window.onload = () => {
+    document.body.style.opacity = "1";
+  };
+</script>
 
 </body>
 </html>
