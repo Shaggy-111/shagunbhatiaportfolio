@@ -1,42 +1,40 @@
-// Smooth reveal animation on scroll
-const scrollReveal = () => {
+// Intersection Observer for Scroll Animations
+const revealOnScroll = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+                entry.target.classList.add('visible');
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.exp-card, .work-card').forEach(el => {
+    document.querySelectorAll('.project-item, .service-box').forEach(el => {
         el.style.opacity = "0";
-        el.style.transform = "translateY(50px)";
-        el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
+        el.style.transform = "translateY(40px)";
+        el.style.transition = "all 0.8s ease-out";
         observer.observe(el);
     });
 };
 
-// CSS Injection for reveal
+// Apply styles for animation
 const style = document.createElement('style');
 style.innerHTML = `
-    .active {
+    .visible {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
 `;
 document.head.appendChild(style);
 
-document.addEventListener('DOMContentLoaded', scrollReveal);
+// Initialize
+window.addEventListener('DOMContentLoaded', revealOnScroll);
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        nav.style.background = "rgba(5, 5, 5, 0.8)";
-        nav.style.backdropFilter = "blur(10px)";
-        nav.style.borderBottom = "1px solid rgba(255,255,255,0.05)";
-    } else {
-        nav.style.background = "transparent";
-        nav.style.borderBottom = "none";
-    }
+// Smooth scroll fix
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
