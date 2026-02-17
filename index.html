@@ -3,104 +3,23 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Shagun Bhatia | Full Stack App Developer</title>
 
 <link rel="stylesheet" href="style.css" />
 
 <style>
-body{opacity:0;transition:0.6s;font-family:Arial,Helvetica,sans-serif}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
-}
-.hero h1{font-size:36px;margin-bottom:10px}
-.hero p{opacity:.9}
-.hire-btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#22c55e;
-  color:#fff;
-  padding:12px 24px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.hire-btn:hover{background:#16a34a}
-
-/* SECTIONS */
-section{padding:40px 20px;max-width:1100px;margin:auto}
-h2{margin-bottom:10px}
-
-/* PROJECT CARD */
-.project{
-  background:#fff;
-  border-radius:10px;
-  padding:20px;
-  margin-bottom:40px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-/* VIDEO */
-.video-box{margin-top:20px}
-
-/* GALLERY */
-.gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:15px}
-.gallery img{
-  width:100%;
-  max-width:260px;
-  border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-  transition:.3s;
-}
-.gallery img:hover{transform:scale(1.04)}
-
-/* TRUST SECTION */
-.trust{
-  background:#f8fafc;
-  text-align:center;
-  padding:40px 20px;
-}
-.badge{
-  display:inline-block;
-  margin:8px;
-  padding:8px 14px;
-  background:#e2e8f0;
-  border-radius:6px;
-  font-size:14px;
-}
-
-/* CONTACT */
-footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
-
-/* WHATSAPP */
-.whatsapp-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,.2);
-}
+body{opacity:0;transition:0.6s}
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero">
+<header class="hero">
 <h1>Shagun Bhatia</h1>
 <p>Full Stack App Developer | Android • iOS • Backend • Admin Panels</p>
 <a class="hire-btn" href="https://wa.me/917067335518" target="_blank">Hire Me</a>
-</div>
+</header>
 
 <!-- ABOUT -->
 <section>
@@ -127,9 +46,9 @@ Helping businesses digitize operations and grow faster with technology.
 <!-- ================= PROJECT 1 ================= -->
 <section class="project">
 <h2>AquaTrack Water Delivery System</h2>
-<p>
-Complete B2B & B2C water delivery platform with role-based login,
-order tracking, delivery management and business analytics dashboard.
+
+<p><b>Project Brief:</b>  
+Complete B2B & B2C water delivery platform with role-based login, order tracking, delivery management and analytics dashboard. Built for real-world business automation and scalability.
 </p>
 
 <h3>Mobile App Demo</h3>
@@ -139,7 +58,7 @@ order tracking, delivery management and business analytics dashboard.
 </video>
 </div>
 
-<h3>System Walkthrough (Cloud Video)</h3>
+<h3>Full System Walkthrough</h3>
 <div class="video-box">
 <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview"
 width="100%" height="480" allow="autoplay"></iframe>
@@ -159,9 +78,9 @@ width="100%" height="480" allow="autoplay"></iframe>
 <!-- ================= PROJECT 2 ================= -->
 <section class="project">
 <h2>Admin Web Portal</h2>
-<p>
-Advanced business admin dashboard to manage orders, QR system,
-complaints handling, reporting and real-time operations.
+
+<p><b>Project Brief:</b>  
+Advanced business admin dashboard to manage orders, QR system, complaints handling, reporting and real-time operations. Designed for production usage and business workflow automation.
 </p>
 
 <div class="gallery">
@@ -175,9 +94,9 @@ complaints handling, reporting and real-time operations.
 <!-- ================= PROJECT 3 ================= -->
 <section class="project">
 <h2>Solar Survey Mobile App</h2>
-<p>
-Field survey mobile application for solar planning, inspection and automated
-panel calculation with real-time reporting.
+
+<p><b>Project Brief:</b>  
+Field survey mobile application for solar planning, inspection and automated panel calculation with real-time reporting and professional PDF generation.
 </p>
 
 <div class="gallery">
@@ -189,16 +108,20 @@ panel calculation with real-time reporting.
 </div>
 </section>
 
-<!-- TRUST / CLIENT ATTRACTION -->
-<div class="trust">
+<!-- WHY CLIENT CHOOSE ME -->
+<section class="trust">
 <h2>Why Clients Choose Me</h2>
-<span class="badge">Full Stack Developer</span>
-<span class="badge">Startup Specialist</span>
-<span class="badge">Business Automation</span>
-<span class="badge">Scalable Architecture</span>
-<span class="badge">Production Ready Apps</span>
-<span class="badge">Ongoing Support</span>
+
+<div class="badges">
+<span>✔ Full Stack Developer</span>
+<span>✔ Real Business Apps</span>
+<span>✔ Scalable Architecture</span>
+<span>✔ Startup Specialist</span>
+<span>✔ Clean UI/UX</span>
+<span>✔ Fast Delivery</span>
+<span>✔ Long-Term Support</span>
 </div>
+</section>
 
 <!-- CONTACT -->
 <section>
@@ -215,15 +138,7 @@ panel calculation with real-time reporting.
 💬 Chat on WhatsApp
 </a>
 
-<script>
-window.onload=()=>{document.body.style.opacity="1";}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
