@@ -1,40 +1,42 @@
-// Intersection Observer for Scroll Animations
-const revealOnScroll = () => {
+// Smooth reveal animation on scroll
+const scrollReveal = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.project-item, .service-box').forEach(el => {
+    document.querySelectorAll('.exp-card, .work-card').forEach(el => {
         el.style.opacity = "0";
-        el.style.transform = "translateY(40px)";
-        el.style.transition = "all 0.8s ease-out";
+        el.style.transform = "translateY(50px)";
+        el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
         observer.observe(el);
     });
 };
 
-// Apply styles for animation
+// CSS Injection for reveal
 const style = document.createElement('style');
 style.innerHTML = `
-    .visible {
+    .active {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
 `;
 document.head.appendChild(style);
 
-// Initialize
-window.addEventListener('DOMContentLoaded', revealOnScroll);
+document.addEventListener('DOMContentLoaded', scrollReveal);
 
-// Smooth scroll fix
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        nav.style.background = "rgba(5, 5, 5, 0.8)";
+        nav.style.backdropFilter = "blur(10px)";
+        nav.style.borderBottom = "1px solid rgba(255,255,255,0.05)";
+    } else {
+        nav.style.background = "transparent";
+        nav.style.borderBottom = "none";
+    }
 });
