@@ -1,5 +1,13 @@
 // ================================
-// Smooth Scroll for Anchor Links
+// Page Fade-in
+// ================================
+window.addEventListener("load", () => {
+  document.body.style.opacity = "1";
+});
+
+
+// ================================
+// Smooth Scroll
 // ================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -15,14 +23,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ================================
-// Page Fade-in Effect
-// ================================
-window.addEventListener("load", () => {
-  document.body.style.opacity = "1";
-});
-
-
-// ================================
 // IMAGE LIGHTBOX (Click to Zoom)
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".gallery img");
   if (!images.length) return;
 
-  // Create Lightbox dynamically
   const lightbox = document.createElement("div");
-  lightbox.id = "lightbox";
   lightbox.style.position = "fixed";
   lightbox.style.top = 0;
   lightbox.style.left = 0;
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.appendChild(img);
   document.body.appendChild(lightbox);
 
-  // Click image → open
   images.forEach(image => {
     image.addEventListener("click", () => {
       img.src = image.src;
@@ -60,16 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Click outside → close
   lightbox.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
 
-  // ESC → close
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       lightbox.style.display = "none";
     }
   });
-
 });
