@@ -3,41 +3,116 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shagun Bhatia | Full Stack Developer</title>
+
+<title>Shagun Bhatia | Full Stack App Developer</title>
 
 <link rel="stylesheet" href="style.css" />
 
 <style>
-body { opacity:0; transition:0.6s; }
+body{opacity:0;transition:0.6s;font-family:Arial,Helvetica,sans-serif}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:#fff;
+  text-align:center;
+  padding:60px 20px;
+}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{opacity:.9}
+.hire-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#22c55e;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.hire-btn:hover{background:#16a34a}
+
+/* SECTIONS */
+section{padding:40px 20px;max-width:1100px;margin:auto}
+h2{margin-bottom:10px}
+
+/* PROJECT CARD */
+.project{
+  background:#fff;
+  border-radius:10px;
+  padding:20px;
+  margin-bottom:40px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+/* VIDEO */
+.video-box{margin-top:20px}
+
+/* GALLERY */
+.gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:15px}
 .gallery img{
   width:100%;
-  max-width:280px;
-  margin:10px;
+  max-width:260px;
   border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  transition:.3s;
 }
-.video-box{
-  margin-top:20px;
+.gallery img:hover{transform:scale(1.04)}
+
+/* TRUST SECTION */
+.trust{
+  background:#f8fafc;
+  text-align:center;
+  padding:40px 20px;
+}
+.badge{
+  display:inline-block;
+  margin:8px;
+  padding:8px 14px;
+  background:#e2e8f0;
+  border-radius:6px;
+  font-size:14px;
+}
+
+/* CONTACT */
+footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
+
+/* WHATSAPP */
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Shagun Bhatia</h1>
-  <p>Full Stack App Developer | Android | iOS | Backend | Admin Panel</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+<h1>Shagun Bhatia</h1>
+<p>Full Stack App Developer | Android • iOS • Backend • Admin Panels</p>
+<a class="hire-btn" href="https://wa.me/917067335518" target="_blank">Hire Me</a>
+</div>
 
+<!-- ABOUT -->
 <section>
 <h2>About Me</h2>
 <p>
 I build complete mobile and web solutions for startups and businesses.
-I specialize in scalable backend systems, mobile apps, and admin dashboards.
-Focused on real-world business automation and user-friendly design.
+Specialized in scalable backend systems, business automation, and user-friendly applications.
+Helping businesses digitize operations and grow faster with technology.
 </p>
 </section>
 
+<!-- SERVICES -->
 <section>
 <h2>Services</h2>
 <ul>
@@ -45,33 +120,32 @@ Focused on real-world business automation and user-friendly design.
 <li>Web Admin Panels & Dashboards</li>
 <li>Backend API Development</li>
 <li>Full Stack Business Applications</li>
-<li>App Maintenance & Upgrades</li>
+<li>App Maintenance & Long-Term Support</li>
 </ul>
 </section>
 
 <!-- ================= PROJECT 1 ================= -->
-
-<section>
+<section class="project">
 <h2>AquaTrack Water Delivery System</h2>
-<p>Complete B2B & B2C water delivery platform with role-based login, order tracking, delivery management and admin analytics.</p>
+<p>
+Complete B2B & B2C water delivery platform with role-based login,
+order tracking, delivery management and business analytics dashboard.
+</p>
 
-<h3>App Demo Video</h3>
-
+<h3>Mobile App Demo</h3>
 <div class="video-box">
 <video width="100%" controls>
-  <source src="videos/aquatrack%20mobile%20app.mp4" type="video/mp4">
+<source src="videos/aquatrack mobile app.mp4" type="video/mp4">
 </video>
 </div>
 
-<h3>Full System Walkthrough (Cloud Video)</h3>
-
+<h3>System Walkthrough (Cloud Video)</h3>
 <div class="video-box">
 <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview"
 width="100%" height="480" allow="autoplay"></iframe>
 </div>
 
 <h3>Screenshots</h3>
-
 <div class="gallery">
 <img src="screenshots/aquatrack-Front page.png">
 <img src="screenshots/aquatrack-login Page.png">
@@ -83,10 +157,12 @@ width="100%" height="480" allow="autoplay"></iframe>
 </section>
 
 <!-- ================= PROJECT 2 ================= -->
-
-<section>
+<section class="project">
 <h2>Admin Web Portal</h2>
-<p>Advanced admin panel to manage orders, QR system, complaints, analytics and real-time operations.</p>
+<p>
+Advanced business admin dashboard to manage orders, QR system,
+complaints handling, reporting and real-time operations.
+</p>
 
 <div class="gallery">
 <img src="screenshots/web portal-login page.png">
@@ -97,10 +173,12 @@ width="100%" height="480" allow="autoplay"></iframe>
 </section>
 
 <!-- ================= PROJECT 3 ================= -->
-
-<section>
+<section class="project">
 <h2>Solar Survey Mobile App</h2>
-<p>Field survey mobile app for solar planning, inspection, and automated system calculation.</p>
+<p>
+Field survey mobile application for solar planning, inspection and automated
+panel calculation with real-time reporting.
+</p>
 
 <div class="gallery">
 <img src="screenshots/solar survey 1.png">
@@ -111,6 +189,18 @@ width="100%" height="480" allow="autoplay"></iframe>
 </div>
 </section>
 
+<!-- TRUST / CLIENT ATTRACTION -->
+<div class="trust">
+<h2>Why Clients Choose Me</h2>
+<span class="badge">Full Stack Developer</span>
+<span class="badge">Startup Specialist</span>
+<span class="badge">Business Automation</span>
+<span class="badge">Scalable Architecture</span>
+<span class="badge">Production Ready Apps</span>
+<span class="badge">Ongoing Support</span>
+</div>
+
+<!-- CONTACT -->
 <section>
 <h2>Contact</h2>
 <p>Email: <a href="mailto:shagunbhatia98@gmail.com">shagunbhatia98@gmail.com</a></p>
@@ -118,7 +208,7 @@ width="100%" height="480" allow="autoplay"></iframe>
 </section>
 
 <footer>
-<p>© 2026 Shagun Bhatia</p>
+<p>© 2026 Shagun Bhatia — All Rights Reserved</p>
 </footer>
 
 <a href="https://wa.me/917067335518" target="_blank" class="whatsapp-btn">
