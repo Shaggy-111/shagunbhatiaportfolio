@@ -3,112 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shagun Bhatia | Full Stack Developer & Automation Expert</title>
+    <title>Shagun Bhatia | Full-Stack Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="glow-sphere"></div>
+    <div class="glow-bg"></div>
 
     <header class="hero">
         <div class="container">
-            <div class="status-pill">● Available for Projects</div>
-            <h1>Transforming Ideas into <br><span class="text-gradient">Scalable Software</span></h1>
-            <p>Full Stack Developer specializing in B2B Platforms, Business Automation, and Enterprise-grade Admin Portals.</p>
-            <div class="hero-actions">
+            <h1 class="shagun-name">Shagun Bhatia</h1>
+            <p class="hero-tagline">Full Stack App Developer | Android • iOS • Backend • Admin Panels</p>
+            <div class="hero-btns">
                 <a href="https://wa.me/917067335518" class="btn-primary">Hire Me</a>
-                <a href="#projects" class="btn-outline">View Portfolio</a>
+                <a href="#projects" class="btn-outline">Explore My Work</a>
             </div>
         </div>
     </header>
 
     <main class="container">
         
-        <section class="services">
-            <div class="service-box">
-                <h3>Mobile Apps</h3>
-                <p>Native-feel Android & iOS apps built for performance and scale.</p>
-            </div>
-            <div class="service-box">
-                <h3>Admin Portals</h3>
-                <p>Advanced dashboards for real-time business operations tracking.</p>
-            </div>
-            <div class="service-box">
-                <h3>Automation</h3>
-                <p>Digitizing manual workflows to save businesses time and money.</p>
-            </div>
-        </section>
+        <h2 id="projects" class="section-title">Professional Projects</h2>
 
-        <h2 id="projects" class="section-title">Case Studies</h2>
-
-        <section class="project-item">
+        <section class="project-card">
             <div class="project-info">
-                <span class="tag">Flagship B2B Platform</span>
+                <span class="badge">B2B Platform</span>
                 <h2>AquaTrack Water Delivery System</h2>
-                <p>A comprehensive ecosystem designed to modernize water delivery businesses. This platform bridges the gap between B2B and B2C operations.</p>
-                <ul class="points">
-                    <li><strong>Smart Management:</strong> Role-based access for admins, managers, and delivery agents.</li>
-                    <li><strong>Real-time Tracking:</strong> Live order monitoring and delivery status updates.</li>
-                    <li><strong>Business Analytics:</strong> Insightful dashboards to track revenue and growth.</li>
-                </ul>
+                <p>A complete automation suite for water businesses featuring role-based logins, order tracking, and delivery management.</p>
+                <div class="video-container">
+                    <h3>Mobile App Demo</h3>
+                    <video controls poster="screenshots/aquatrack-Front page.png">
+                        <source src="videos/aquatrack%20mobile%20app.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="project-visual">
-                <img src="screenshots/aquatrack-Dashboard.png" alt="AquaTrack Interface">
-                <div class="video-overlay">
-                    <span>Includes Mobile & Web Demo</span>
+
+            <div class="slider-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="screenshots/aquatrack-Front page.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/aquatrack-login Page.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/aquatrack-Dashboard.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/aquatrack-Screen UI.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/aquatrack-order track.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
 
-        <section class="project-item reverse">
+        <section class="project-card reverse">
             <div class="project-info">
-                <span class="tag">Operational Control</span>
+                <span class="badge">Enterprise Web</span>
                 <h2>Advanced Admin Web Portal</h2>
-                <p>The "command center" for business owners. This portal focuses on maximizing efficiency through automated data handling.</p>
-                <ul class="points">
-                    <li><strong>QR System:</strong> Seamless inventory and asset tracking using QR technology.</li>
-                    <li><strong>Operations:</strong> Handle complaints, reporting, and team management in one click.</li>
-                    <li><strong>Reporting:</strong> Automated daily logs and professional PDF reports.</li>
-                </ul>
+                <p>The command center for business operations. Includes QR Management, Complaint tracking, and Order processing dashboards.</p>
+                <div class="video-container">
+                    <h3>System Walkthrough</h3>
+                    <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview" width="100%" height="300" allow="autoplay"></iframe>
+                </div>
             </div>
-            <div class="project-visual">
-                <img src="screenshots/Admin Dashboard.png" alt="Admin Portal Dashboard">
+
+            <div class="slider-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="screenshots/web portal-login page.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/web portal -orders.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/web portal -complaints.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/web portal -QR Management.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/Admin Dashboard.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </section>
 
-        <section class="project-item">
+        <section class="project-card">
             <div class="project-info">
-                <span class="tag">Field Tech</span>
+                <span class="badge">Utilities App</span>
                 <h2>Solar Survey Mobile App</h2>
-                <p>A specialized tool for solar engineers to conduct field inspections, calculate panel requirements offline, and generate instant reports.</p>
+                <p>Field survey application for solar planning, inspection, and automated panel calculation with offline reporting.</p>
             </div>
-            <div class="project-visual">
-                <div class="gallery-grid">
-                    <img src="screenshots/solar survey 1.png">
-                    <img src="screenshots/solar survey 2.png">
+
+            <div class="slider-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="screenshots/solar survey 1.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/solar survey 2.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/solar survey 3.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/solar survey 4.png"></div>
+                        <div class="swiper-slide"><img src="screenshots/solar survey 5.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <h2>Ready to build something great?</h2>
-            <p>Get in touch for a custom quote or consultation.</p>
-            <div class="contact-grid">
-                <a href="mailto:shagunbhatia98@gmail.com">shagunbhatia98@gmail.com</a>
-                <a href="https://github.com/Shaggy-111" target="_blank">GitHub Profile</a>
-            </div>
-            <p class="copyright">© 2026 Shagun Bhatia — Software Engineer</p>
-        </div>
+    <footer class="contact-footer">
+        <h2>Start Your Digital Transformation</h2>
+        <p>Email: shagunbhatia98@gmail.com</p>
+        <a href="https://wa.me/917067335518" class="whatsapp-btn">💬 Chat on WhatsApp</a>
     </footer>
 
-    <a href="https://wa.me/917067335518" class="whatsapp-sticky" target="_blank">
-        Chat on WhatsApp
-    </a>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
