@@ -1,48 +1,71 @@
 :root {
-    --bg: #020617;
-    --card: #0f172a;
-    --accent: #22d3ee;
-    --primary: #10b981;
-    --text: #f8fafc;
-    --border: #1e293b;
+    --bg-dark: #050505;
+    --card-bg: #111111;
+    --primary-cyan: #22d3ee;
+    --primary-green: #10b981;
+    --text-white: #ffffff;
+    --text-gray: #a1a1aa;
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-body { background: var(--bg); color: var(--text); line-height: 1.6; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+body { background: var(--bg-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-/* Hero */
-.hero { text-align: center; padding: 80px 0; background: linear-gradient(180deg, #0f172a 0%, #020617 100%); }
-.shagun-name { font-size: 3.5rem; font-weight: 800; background: linear-gradient(90deg, #22d3ee, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero-tagline { color: #94a3b8; font-size: 1.2rem; margin: 15px 0 30px; }
+/* Glowing Background Decor */
+.background-glow {
+    position: fixed; top: -10%; right: -5%; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.07) 0%, rgba(5, 5, 5, 0) 70%);
+    z-index: -1;
+}
 
-.btn-primary { background: var(--primary); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-right: 10px; transition: 0.3s; }
-.btn-outline { border: 1px solid var(--border); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; transition: 0.3s; }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+/* Header */
+.main-header { padding: 100px 0 60px; text-align: center; }
+.dev-name { font-size: 4rem; font-weight: 800; background: linear-gradient(90deg, var(--primary-cyan), var(--primary-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+.dev-role { color: var(--text-gray); font-size: 1.2rem; margin-bottom: 40px; }
 
-/* Project Cards */
-.section-title { font-size: 2.5rem; margin-top: 50px; text-align: center; }
-.project-card { display: flex; gap: 40px; margin: 60px 0; background: var(--card); padding: 40px; border-radius: 24px; border: 1px solid var(--border); align-items: center; }
-.project-card.reverse { flex-direction: row-reverse; }
+.btn-primary { background: var(--primary-green); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; transition: 0.3s; }
+.btn-secondary { border: 1px solid var(--border-color); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; display: inline-block; margin: 10px; transition: 0.3s; }
+.btn-primary:hover { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); transform: translateY(-2px); }
 
-.project-info { flex: 1; }
-.badge { color: var(--accent); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-.project-info h2 { font-size: 2rem; margin: 10px 0; }
-.video-container { margin-top: 20px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: #000; }
-.video-container h3 { font-size: 0.9rem; padding: 10px; background: #1e293b; color: var(--accent); }
-video { width: 100%; display: block; }
+/* Project Layout */
+.section-heading { font-size: 2.5rem; margin: 60px 0; text-align: center; }
+.project-block { 
+    display: flex; gap: 60px; margin-bottom: 120px; align-items: center; 
+    background: var(--card-bg); padding: 50px; border-radius: 30px; border: 1px solid var(--border-color);
+}
+.project-block.reverse { flex-direction: row-reverse; }
 
-/* Slider */
-.slider-wrapper { flex: 1; min-width: 0; }
-.swiper { width: 100%; border-radius: 15px; border: 1px solid var(--border); }
-.swiper-slide img { width: 100%; display: block; transition: 0.3s; }
+.project-text { flex: 1.2; }
+.category-tag { color: var(--primary-cyan); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+.project-text h2 { font-size: 2.5rem; margin: 15px 0; }
+.project-text p { color: var(--text-gray); margin-bottom: 30px; }
 
-/* Contact Footer */
-.contact-footer { text-align: center; padding: 100px 20px; border-top: 1px solid var(--border); }
-.whatsapp-btn { background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; font-weight: bold; margin-top: 20px; }
+/* Video Player Styling */
+.video-section { margin-top: 30px; border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); background: #000; }
+.video-section h3 { background: #1a1a1a; padding: 10px 20px; font-size: 0.9rem; color: var(--primary-cyan); }
 
-@media (max-width: 850px) {
-    .project-card, .project-card.reverse { flex-direction: column; padding: 20px; }
-    .shagun-name { font-size: 2.5rem; }
+/* Slider Styling */
+.project-slider { flex: 1; min-width: 0; position: relative; }
+.swiper { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+.swiper-slide img { width: 100%; border-radius: 20px; }
+.swiper-button-next, .swiper-button-prev { color: var(--primary-cyan) !important; transform: scale(0.6); }
+
+/* Fixed WhatsApp Float */
+.whatsapp-float {
+    position: fixed; bottom: 30px; right: 30px;
+    background: #25d366; color: white; padding: 12px 25px;
+    border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 10px;
+    font-weight: 700; z-index: 9999; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.whatsapp-float img { width: 25px; }
+
+/* Footer */
+.footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border-color); }
+.footer a { color: var(--primary-cyan); text-decoration: none; }
+
+@media (max-width: 990px) {
+    .project-block, .project-block.reverse { flex-direction: column; padding: 30px; }
+    .dev-name { font-size: 2.8rem; }
 }
