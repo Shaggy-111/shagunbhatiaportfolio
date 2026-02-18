@@ -1,39 +1,20 @@
-// Initialize Swiper for all sliders on page
-document.addEventListener('DOMContentLoaded', function() {
-  const swipers = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2,
-      slideShadows: true,
-    },
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+// Initialize Swiper with AI "Cube" or "Fade" Effect
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper(".mySwiper", {
+        grabCursor: true,
+        effect: "creative",
+        creativeEffect: {
+            prev: { shadow: true, translate: [0, 0, -400] },
+            next: { translate: ["100%", 0, 0] },
+        },
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: ".swiper-pagination", clickable: true },
+    });
 });
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Parallax Effect for Background Stars
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    document.querySelector('.stars-container').style.transform = `translateY(${scrolled * 0.3}px)`;
 });
