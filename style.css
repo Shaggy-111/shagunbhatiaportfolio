@@ -1,55 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shagun Bhatia | Full Stack Developer</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+    --bg: #010409;
+    --accent: #22d3ee;
+    --card: rgba(13, 17, 23, 0.8);
+    --border: rgba(255, 255, 255, 0.1);
+}
 
-<header class="hero">
-  <h1>Shagun <span>Bhatia</span></h1>
-  <p>AI-Driven Full Stack Developer • Android • iOS • Backend • Admin Panels</p>
-  <div class="hero-buttons">
-    <a href="https://wa.me/917067335518" target="_blank" class="btn primary">Hire Me</a>
-    <a href="#projects" class="btn">Explore My Work</a>
-  </div>
-</header>
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+body { background: var(--bg); color: #fff; overflow-x: hidden; }
 
-<section id="projects" class="projects">
-  <h2>Professional Projects</h2>
+canvas { position: fixed; top:0; left:0; z-index: -1; width: 100%; height: 100%; }
 
-  <div class="project-card" onclick="openProject('aquatrack')">
-    <h3>AquaTrack Water Delivery System</h3>
-    <p>Complete automation for water delivery business including admin dashboard & tracking.</p>
-  </div>
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-  <div class="project-card" onclick="openProject('admin')">
-    <h3>Advanced Admin Panel</h3>
-    <p>QR management, complaints, analytics & business control system.</p>
-  </div>
+/* Hero Section */
+.hero { padding: 120px 0 80px; text-align: center; }
+.badge { display: inline-block; padding: 6px 12px; border: 1px solid var(--accent); color: var(--accent); border-radius: 50px; font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 20px; }
+.shagun-title { font-size: 4.5rem; font-weight: 800; background: linear-gradient(90deg, #fff, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { color: #8b949e; font-size: 1.25rem; margin-bottom: 40px; }
 
-  <div class="project-card" onclick="openProject('solar')">
-    <h3>Solar Survey Mobile App</h3>
-    <p>AI-based solar field inspection and calculation system.</p>
-  </div>
+.btn-primary { background: var(--accent); color: #000; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-right: 15px; display: inline-block;}
+.btn-primary:hover { box-shadow: 0 0 25px rgba(34, 211, 238, 0.4); }
+.btn-outline { border: 1px solid var(--border); color: #fff; padding: 16px 32px; border-radius: 12px; text-decoration: none; display: inline-block; transition: 0.3s;}
 
-</section>
+/* Project Cards */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; }
+.project-card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; cursor: pointer; transition: 0.3s; backdrop-filter: blur(10px); }
+.project-card:hover { border-color: var(--accent); transform: translateY(-10px); }
+.card-image img { width: 100%; height: 250px; object-fit: cover; }
+.card-info { padding: 25px; }
+.click-hint { color: var(--accent); font-size: 0.85rem; display: block; margin-top: 15px; }
 
-<footer>
-  <p>Email: shagunbhatia98@gmail.com</p>
-  <p>© 2026 Shagun Bhatia — Software Engineer</p>
-</footer>
+/* Modal System */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
+.modal-content { background: #0d1117; margin: 5% auto; padding: 40px; border: 1px solid var(--border); width: 80%; border-radius: 30px; position: relative; }
+.close { position: absolute; right: 30px; top: 20px; font-size: 40px; color: #fff; cursor: pointer; }
 
-<!-- PROJECT MODAL -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div id="modalBody"></div>
-  </div>
-</div>
+.modal-body video { width: 100%; border-radius: 15px; margin-top: 20px; }
+.screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+.screenshot-grid img { width: 100%; border-radius: 10px; }
 
-<script src="script.js"></script>
-</body>
-</html>
+/* WhatsApp */
+.whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #23d366; color: #fff; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 10px; z-index: 999;}
+.whatsapp-btn img { width: 25px; }
+
+@media (max-width: 768px) {
+    .shagun-title { font-size: 2.5rem; }
+    .modal-content { width: 95%; padding: 20px; }
+}
