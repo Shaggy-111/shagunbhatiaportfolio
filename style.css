@@ -1,59 +1,21 @@
-:root {
-    --bg: #010409;
-    --accent: #22d3ee;
-    --card: rgba(13, 17, 23, 0.95);
-    --border: rgba(255, 255, 255, 0.1);
+/* Improved Background depth */
+canvas { 
+    filter: blur(1px); /* Softens the AI lines for a more "premium" look */
+    opacity: 0.6;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-body { background: var(--bg); color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
-
-canvas { position: fixed; top:0; left:0; z-index: -1; width: 100%; height: 100%; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Hero Section */
-.hero { padding: 140px 0 100px; text-align: center; }
-.badge { display: inline-block; padding: 6px 12px; border: 1px solid var(--accent); color: var(--accent); border-radius: 50px; font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 20px; }
-.shagun-title { font-size: 5rem; font-weight: 800; background: linear-gradient(90deg, #fff, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero-sub { color: #8b949e; font-size: 1.2rem; margin-bottom: 40px; }
-
-.btn-primary { background: var(--accent); color: #000; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; margin-right: 15px; }
-.btn-outline { border: 1px solid var(--border); color: #fff; padding: 16px 32px; border-radius: 12px; text-decoration: none; display: inline-block; transition: 0.3s; }
-.btn-primary:hover { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); transform: translateY(-2px); }
-
-/* Project Layout */
-.section-title { font-size: 3rem; text-align: center; margin-bottom: 80px; }
-.project-item { display: flex; gap: 60px; margin-bottom: 120px; align-items: center; background: var(--card); padding: 50px; border-radius: 30px; border: 1px solid var(--border); backdrop-filter: blur(15px); }
-.project-item.reverse { flex-direction: row-reverse; }
-
-.project-content { flex: 1; }
-.tech-tag { color: var(--accent); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 15px; }
-.project-content h3 { font-size: 2.5rem; margin-bottom: 20px; }
-.video-container { margin-top: 30px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); background: #000; aspect-ratio: 16/9; }
-.video-container video, .video-container iframe { width: 100%; height: 100%; border: none; }
-
-/* PRO SLIDER STYLES */
-.project-slider-container { flex: 0.8; min-width: 0; }
-.swiper { width: 100%; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; }
-.swiper-slide { display: flex; justify-content: center; align-items: center; background: #000; }
-.swiper-slide img { width: 100%; height: auto; object-fit: contain; border-radius: 15px; }
-.swiper-pagination-bullet { background: #fff !important; }
-.swiper-pagination-bullet-active { background: var(--accent) !important; }
-
-/* Footer */
-.footer { text-align: center; padding: 80px 0; border-top: 1px solid var(--border); color: #8b949e; }
-
-/* Fixed WhatsApp */
-.whatsapp-fixed { 
-    position: fixed; bottom: 30px; right: 30px; background: #23d366; color: #fff; 
-    padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; 
-    display: flex; align-items: center; gap: 10px; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+/* Perfect Spacing for Project Items */
+.project-item { 
+    display: flex; 
+    gap: 80px; /* Controlled space between text and slider */
+    margin-bottom: 150px; /* Clear breathing room between projects */
+    align-items: center; 
+    max-width: 1000px; /* Prevents stretching on big screens */
+    margin-left: auto;
+    margin-right: auto;
 }
-.whatsapp-fixed img { width: 25px; height: 25px; }
 
-@media (max-width: 1000px) {
-    .project-item, .project-item.reverse { flex-direction: column; padding: 30px; }
-    .project-slider-container { width: 100%; }
-    .shagun-title { font-size: 3.5rem; }
-    .whatsapp-fixed span { display: none; }
+/* Pro-level Card Shadows */
+.project-slider-container, .video-container {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 15px rgba(34, 211, 238, 0.1);
 }
