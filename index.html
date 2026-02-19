@@ -26,34 +26,25 @@
 
     <main class="container" id="projects">
         <h2 class="section-title">Professional Projects</h2>
-        
         <div class="project-grid">
             <div class="project-card" onclick="openModal('aqua-modal')">
-                <div class="card-image">
-                    <img src="screenshots/aquatrack-Front page.png" alt="AquaTrack">
-                </div>
+                <div class="card-image"><img src="screenshots/aquatrack-Front page.png"></div>
                 <div class="card-info">
                     <h3>AquaTrack System</h3>
                     <p>B2B Water Delivery Automation</p>
                     <span class="click-hint">Click to expand →</span>
                 </div>
             </div>
-
             <div class="project-card" onclick="openModal('admin-modal')">
-                <div class="card-image">
-                    <img src="screenshots/Admin Dashboard.png" alt="Admin Portal">
-                </div>
+                <div class="card-image"><img src="screenshots/Admin Dashboard.png"></div>
                 <div class="card-info">
                     <h3>Admin Web Portal</h3>
                     <p>Business Operations Hub</p>
                     <span class="click-hint">Click to expand →</span>
                 </div>
             </div>
-
             <div class="project-card" onclick="openModal('solar-modal')">
-                <div class="card-image">
-                    <img src="screenshots/solar survey 1.png" alt="Solar App">
-                </div>
+                <div class="card-image"><img src="screenshots/solar survey 1.png"></div>
                 <div class="card-info">
                     <h3>Solar Survey App</h3>
                     <p>Field Inspection Utility</p>
@@ -64,24 +55,23 @@
     </main>
 
     <div id="aqua-modal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content side-layout">
             <span class="close" onclick="closeModal('aqua-modal')">&times;</span>
-            <h2>AquaTrack: Full System Overview</h2>
-            <div class="modal-body">
+            <div class="modal-left">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="screenshots/aquatrack-Front page.png"></div>
-                        <div class="swiper-slide"><img src="screenshots/aquatrack-login Page.png"></div>
                         <div class="swiper-slide"><img src="screenshots/aquatrack -Dashboard.png"></div>
-                        <div class="swiper-slide"><img src="screenshots/aquatrack-Screen UI.png"></div>
                         <div class="swiper-slide"><img src="screenshots/aquatrack-order track.png"></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="video-box">
-                    <h3>App Demo</h3>
+            </div>
+            <div class="modal-right">
+                <h2>AquaTrack Ecosystem</h2>
+                <p>Comprehensive B2B automation. Real-time tracking and delivery management.</p>
+                <div class="video-preview">
                     <video controls><source src="videos/aquatrack mobile app.mp4" type="video/mp4"></video>
                 </div>
             </div>
@@ -89,41 +79,26 @@
     </div>
 
     <div id="admin-modal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content side-layout">
             <span class="close" onclick="closeModal('admin-modal')">&times;</span>
-            <h2>Admin Web Portal Walkthrough</h2>
-            <div class="modal-body">
-                <div class="video-box full-video">
-                    <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview" width="100%" height="450"></iframe>
-                </div>
-                <div class="screenshot-strip">
-                    <img src="screenshots/web portal -orders.png">
-                    <img src="screenshots/web portal -complaints.png">
-                    <img src="screenshots/web portal -QR Management.png">
+            <div class="modal-left">
+                <div class="video-preview large">
+                    <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview"></iframe>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div id="solar-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('solar-modal')">&times;</span>
-            <h2>Solar Survey Screenshots</h2>
-            <div class="modal-body">
-                <div class="screenshot-grid">
-                    <img src="screenshots/solar survey 1.png">
-                    <img src="screenshots/solar survey 2.png">
-                    <img src="screenshots/solar survey 3.png">
-                    <img src="screenshots/solar survey 4.png">
-                    <img src="screenshots/solar survey 5.png">
+            <div class="modal-right">
+                <h2>Admin Hub</h2>
+                <p>Operational control with QR management and complaints resolution dashboard.</p>
+                <div class="img-grid">
+                    <img src="screenshots/web portal -orders.png">
+                    <img src="screenshots/web portal -complaints.png">
                 </div>
             </div>
         </div>
     </div>
 
     <a href="https://wa.me/917067335518" class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
-        Chat on WhatsApp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""> Chat on WhatsApp
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
