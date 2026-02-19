@@ -1,114 +1,55 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shagun Bhatia | Full Stack Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body{
-background:radial-gradient(circle at top,#020617,#020617);
-color:#e5e7eb;
-}
+<header class="hero">
+  <h1>Shagun <span>Bhatia</span></h1>
+  <p>AI-Driven Full Stack Developer • Android • iOS • Backend • Admin Panels</p>
+  <div class="hero-buttons">
+    <a href="https://wa.me/917067335518" target="_blank" class="btn primary">Hire Me</a>
+    <a href="#projects" class="btn">Explore My Work</a>
+  </div>
+</header>
 
-/* HERO */
-.hero{
-text-align:center;
-padding:70px 20px;
-background:url("https://www.transparenttextures.com/patterns/cubes.png"),
-linear-gradient(135deg,#020617,#020617);
-}
-.hero h1{font-size:42px}
-.hero h1 span{color:#22c55e}
-.hero p{opacity:.8;margin-top:10px}
-.hero-btns{margin-top:20px}
+<section id="projects" class="projects">
+  <h2>Professional Projects</h2>
 
-.btn{
-padding:10px 22px;
-border-radius:6px;
-background:#111827;
-color:#fff;
-text-decoration:none;
-margin:5px;
-}
-.primary{background:#22c55e}
+  <div class="project-card" onclick="openProject('aquatrack')">
+    <h3>AquaTrack Water Delivery System</h3>
+    <p>Complete automation for water delivery business including admin dashboard & tracking.</p>
+  </div>
 
-/* PROJECTS */
-.projects{padding:60px 20px}
-.projects h2{text-align:center;margin-bottom:30px}
+  <div class="project-card" onclick="openProject('admin')">
+    <h3>Advanced Admin Panel</h3>
+    <p>QR management, complaints, analytics & business control system.</p>
+  </div>
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
+  <div class="project-card" onclick="openProject('solar')">
+    <h3>Solar Survey Mobile App</h3>
+    <p>AI-based solar field inspection and calculation system.</p>
+  </div>
 
-.card{
-background:#020617;
-padding:20px;
-border-radius:12px;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 10px 30px rgba(0,0,0,.6);
-}
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 40px rgba(34,197,94,.2);
-}
+</section>
 
-.card img{
-width:100%;
-border-radius:8px;
-margin-top:10px;
-}
+<footer>
+  <p>Email: shagunbhatia98@gmail.com</p>
+  <p>© 2026 Shagun Bhatia — Software Engineer</p>
+</footer>
 
-.tag{
-background:#22c55e;
-padding:4px 10px;
-border-radius:6px;
-font-size:12px;
-display:inline-block;
-margin-bottom:8px;
-}
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
-/* MODAL FULLSCREEN */
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-z-index:9999;
-align-items:center;
-justify-content:center;
-}
-
-.modal video, .modal img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:40px;
-font-size:40px;
-color:#fff;
-cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#22c55e;
-padding:12px 18px;
-border-radius:50px;
-color:#fff;
-text-decoration:none;
-}
+<script src="script.js"></script>
+</body>
+</html>
