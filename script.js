@@ -7,7 +7,7 @@ function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
-window.onresize = resize;
+window.addEventListener('resize', resize);
 resize();
 
 class Particle {
@@ -52,18 +52,31 @@ function animate() {
 }
 animate();
 
-// MODAL FUNCTIONS
+// FIXED MODAL FUNCTIONS
 function openModal(id) {
-    document.getElementById(id).style.display = "block";
-    document.body.style.overflow = "hidden";
+    const modal = document.getElementById(id);
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
     
+    // Initialize Swiper ONLY when modal opens to prevent errors
     new Swiper(".mySwiper", {
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        loop: true
+        pagination: { el: ".swiper-pagination", clickable: true },
+        loop: true,
+        observer: true,
+        observeParents: true
     });
 }
 
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
     document.body.style.overflow = "auto";
+}
+
+// Close modal if clicking outside content
+window.onclick = function(event) {
+    if (event.target.className === 'modal') {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
 }
