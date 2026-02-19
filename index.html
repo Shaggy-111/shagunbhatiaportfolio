@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shagun Bhatia | AI-Driven Full Stack Developer</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,14 +11,12 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-content">
-    <h1>Shagun <span>Bhatia</span></h1>
-    <p>AI-Driven Full Stack Developer • Android • iOS • Backend • Admin Panels</p>
+  <h1>Shagun <span>Bhatia</span></h1>
+  <p>AI-Driven Full Stack Developer • Android • iOS • Backend • Admin Panels</p>
 
-    <div class="hero-buttons">
-      <a href="https://wa.me/917067335518" target="_blank" class="btn primary">Hire Me</a>
-      <a href="#projects" class="btn secondary">Explore My Work</a>
-    </div>
+  <div class="hero-btns">
+    <a href="https://wa.me/917067335518" target="_blank" class="btn primary">Hire Me</a>
+    <a href="#projects" class="btn">Explore My Work</a>
   </div>
 </header>
 
@@ -29,60 +26,43 @@
 
 <h2>Professional Projects</h2>
 
-<div class="project-grid">
+<div class="grid">
 
 <!-- PROJECT 1 -->
-<div class="project-card">
+<div class="card" onclick="openModal('videos/aquatrack mobile app.mp4')">
   <span class="tag">Automation</span>
-  <h3>AquaTrack Water Delivery System</h3>
-  <p>Complete automation solution for water delivery business including order tracking, delivery management and analytics dashboard.</p>
-
-  <div class="slider">
-    <video controls>
-      <source src="videos/aquatrack mobile app.mp4" type="video/mp4">
-    </video>
-    <img src="screenshots/aquatrack-Front page.png">
-    <img src="screenshots/aquatrack-Dashboard.png">
-    <img src="screenshots/Admin Dashboard.png">
-  </div>
+  <h3>AquaTrack Water Delivery</h3>
+  <p>Full business automation with delivery tracking, analytics and admin system.</p>
+  <img src="screenshots/aquatrack-Dashboard.png">
 </div>
-
 
 <!-- PROJECT 2 -->
-<div class="project-card">
-  <span class="tag">AI + Automation</span>
+<div class="card" onclick="openModal('screenshots/web portal-login page.png', true)">
+  <span class="tag">Admin System</span>
   <h3>Advanced Admin Panel</h3>
-  <p>Smart admin control system for managing orders, QR, complaints, analytics and business operations in real time.</p>
-
-  <div class="slider">
-    <img src="screenshots/web portal-login page.png">
-    <img src="screenshots/web portal -orders.png">
-    <img src="screenshots/web portal -complaints.png">
-    <img src="screenshots/web portal -QR Management.png">
-  </div>
+  <p>QR, complaints, orders and analytics smart admin control dashboard.</p>
+  <img src="screenshots/web portal-login page.png">
 </div>
 
-
 <!-- PROJECT 3 -->
-<div class="project-card">
+<div class="card" onclick="openModal('screenshots/solar survey 1.png', true)">
   <span class="tag">Mobile App</span>
-  <h3>Solar Survey Mobile App</h3>
-  <p>AI-driven solar survey mobile app for field inspection, calculation and automatic report generation.</p>
-
-  <div class="slider">
-    <img src="screenshots/solar survey 1.png">
-    <img src="screenshots/solar survey 2.png">
-    <img src="screenshots/solar survey 3.png">
-    <img src="screenshots/solar survey 4.png">
-    <img src="screenshots/solar survey 5.png">
-  </div>
+  <h3>Solar Survey App</h3>
+  <p>Field solar inspection and AI based calculation mobile application.</p>
+  <img src="screenshots/solar survey 1.png">
 </div>
 
 </div>
 </section>
 
 
-<!-- FOOTER -->
+<!-- MODAL FULLSCREEN -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <div id="modalContent"></div>
+</div>
+
+
 <footer>
   <p>Email: shagunbhatia98@gmail.com</p>
   <p>© 2026 Shagun Bhatia — Software Engineer</p>
@@ -91,6 +71,5 @@
 <a href="https://wa.me/917067335518" class="whatsapp" target="_blank">Chat on WhatsApp</a>
 
 <script src="script.js"></script>
-
 </body>
 </html>
