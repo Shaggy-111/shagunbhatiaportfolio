@@ -228,3 +228,10 @@ MOBILE RESPONSIVE
         display: none;
     }
 }
+.project-item {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 120px;
+    align-items: center;
+    min-height: 300px;
+}
