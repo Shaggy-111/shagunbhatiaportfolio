@@ -1,19 +1,28 @@
-// Fade in
-window.onload = () => {
-  document.body.style.opacity = "1";
-};
+// OPEN MODAL
+function openModal(src, isImage=false){
+  const modal = document.getElementById("modal");
+  const content = document.getElementById("modalContent");
 
+  modal.style.display = "flex";
+  content.innerHTML = "";
 
-// Auto scroll sliders
-document.querySelectorAll(".slider").forEach(slider=>{
-  let scrollAmount = 0;
+  if(isImage){
+    content.innerHTML = `<img src="${src}">`;
+  }else{
+    content.innerHTML = `
+      <video controls autoplay>
+        <source src="${src}" type="video/mp4">
+      </video>`;
+  }
+}
 
-  setInterval(()=>{
-    if(slider.scrollWidth - slider.clientWidth <= scrollAmount){
-      scrollAmount = 0;
-    }else{
-      scrollAmount += 200;
-    }
-    slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
-  },3000);
+// CLOSE MODAL
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("modalContent").innerHTML="";
+}
+
+// ESC CLOSE
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape") closeModal();
 });
