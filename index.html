@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shagun Bhatia | Full-Stack Solutions</title>
+    <title>Shagun Bhatia | Full Stack Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,82 +25,64 @@
 
     <main class="container" id="projects">
         <h2 class="section-title">Professional Projects</h2>
-        <div class="project-grid">
-            <div class="project-card" onclick="openModal('aqua-modal')">
-                <div class="card-image"><img src="screenshots/aquatrack-Front page.png"></div>
-                <div class="card-info">
-                    <h3>AquaTrack System</h3>
-                    <p>B2B Water Delivery Automation</p>
-                    <span class="click-hint">Click to expand →</span>
+        
+        <div class="project-list">
+            <section class="project-item">
+                <div class="project-content">
+                    <span class="tech-tag">B2B Platform</span>
+                    <h3>AquaTrack Water Delivery System</h3>
+                    <p>A complete automation suite for water businesses featuring role-based logins, order tracking, and delivery management.</p>
+                    <div class="video-container">
+                        <video controls poster="screenshots/aquatrack-Front page.png">
+                            <source src="videos/aquatrack mobile app.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card" onclick="openModal('admin-modal')">
-                <div class="card-image"><img src="screenshots/Admin Dashboard.png"></div>
-                <div class="card-info">
+                <div class="project-gallery">
+                    <img src="screenshots/aquatrack -Dashboard.png" alt="Dashboard">
+                    <img src="screenshots/aquatrack-Screen UI.png" alt="UI">
+                </div>
+            </section>
+
+            <section class="project-item reverse">
+                <div class="project-content">
+                    <span class="tech-tag">Enterprise Web</span>
                     <h3>Admin Web Portal</h3>
-                    <p>Business Operations Hub</p>
-                    <span class="click-hint">Click to expand →</span>
+                    <p>Advanced business admin dashboard to manage orders, QR systems, complaints handling, and real-time reporting.</p>
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview"></iframe>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card" onclick="openModal('solar-modal')">
-                <div class="card-image"><img src="screenshots/solar survey 1.png"></div>
-                <div class="card-info">
-                    <h3>Solar Survey App</h3>
-                    <p>Field Inspection Utility</p>
-                    <span class="click-hint">Click to expand →</span>
+                <div class="project-gallery">
+                    <img src="screenshots/web portal -orders.png" alt="Orders">
+                    <img src="screenshots/Admin Dashboard.png" alt="Admin">
                 </div>
-            </div>
+            </section>
+
+            <section class="project-item">
+                <div class="project-content">
+                    <span class="tech-tag">Utilities App</span>
+                    <h3>Solar Survey Mobile App</h3>
+                    <p>Field survey mobile application for solar planning, inspection, and automated panel calculation with real-time reporting.</p>
+                </div>
+                <div class="project-gallery vertical">
+                    <img src="screenshots/solar survey 1.png" alt="Solar 1">
+                    <img src="screenshots/solar survey 3.png" alt="Solar 3">
+                </div>
+            </section>
         </div>
     </main>
 
-    <div id="aqua-modal" class="modal">
-        <div class="modal-content side-layout">
-            <span class="close" onclick="closeModal('aqua-modal')">&times;</span>
-            <div class="modal-left">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="screenshots/aquatrack-Front page.png"></div>
-                        <div class="swiper-slide"><img src="screenshots/aquatrack -Dashboard.png"></div>
-                        <div class="swiper-slide"><img src="screenshots/aquatrack-order track.png"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-            <div class="modal-right">
-                <h2>AquaTrack Ecosystem</h2>
-                <p>Comprehensive B2B automation. Real-time tracking and delivery management.</p>
-                <div class="video-preview">
-                    <video controls><source src="videos/aquatrack mobile app.mp4" type="video/mp4"></video>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer class="footer">
+        <p>shagunbhatia98@gmail.com</p>
+        <p>© 2026 Shagun Bhatia — Software Engineer</p>
+    </footer>
 
-    <div id="admin-modal" class="modal">
-        <div class="modal-content side-layout">
-            <span class="close" onclick="closeModal('admin-modal')">&times;</span>
-            <div class="modal-left">
-                <div class="video-preview large">
-                    <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview"></iframe>
-                </div>
-            </div>
-            <div class="modal-right">
-                <h2>Admin Hub</h2>
-                <p>Operational control with QR management and complaints resolution dashboard.</p>
-                <div class="img-grid">
-                    <img src="screenshots/web portal -orders.png">
-                    <img src="screenshots/web portal -complaints.png">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="https://wa.me/917067335518" class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""> Chat on WhatsApp
+    <a href="https://wa.me/917067335518" class="whatsapp-fixed" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+        <span>Chat with me</span>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
