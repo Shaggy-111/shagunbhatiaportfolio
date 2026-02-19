@@ -51,3 +51,18 @@ function animate() {
     requestAnimationFrame(animate);
 }
 animate();
+
+// INITIALIZE ALL SLIDERS
+const swiper = new Swiper(".mySwiper", {
+    effect: "fade", // Smooth professional transition
+    fadeEffect: { crossFade: true },
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
