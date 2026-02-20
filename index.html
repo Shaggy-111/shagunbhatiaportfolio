@@ -1,121 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shagun Bhatia | Full Stack Solutions</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shagun Bhatia | Full Stack Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <canvas id="neural-bg"></canvas>
 
 <header class="hero">
-  <div class="container">
-    <div class="badge">AI-DRIVEN DEVELOPER</div>
-    <h1 class="shagun-title">Shagun Bhatia</h1>
-    <p class="hero-sub">Architecting high-performance backends and seamless mobile experiences.</p>
-
-    <div class="hero-btns">
-      <a href="https://wa.me/917067335518" class="btn-primary">Hire Me</a>
-      <a href="#projects" class="btn-outline">Explore Work</a>
+    <div class="container">
+        <div class="badge">AI-DRIVEN DEVELOPER</div>
+        <h1 class="shagun-title">Shagun Bhatia</h1>
+        <p class="hero-sub">Architecting high-performance backends and seamless mobile experiences.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/917067335518" class="btn-primary" target="_blank">Hire Me</a>
+            <a href="#projects" class="btn-outline">Explore Work</a>
+        </div>
     </div>
-  </div>
 </header>
 
 <main class="container" id="projects">
-<h2 class="section-title">Professional Projects</h2>
+    <h2 class="section-title">Professional Projects</h2>
 
-<!-- PROJECT 1 -->
-<section class="project-item">
-<div class="project-content">
-<span class="tech-tag">B2B Platform</span>
-<h3>AquaTrack Water Delivery System</h3>
-<p>Complete automation suite for water businesses including order tracking, delivery management and analytics.</p>
+    <section class="project-item">
+        <div class="project-content">
+            <span class="tech-tag">B2B Platform</span>
+            <h3>AquaTrack Water Delivery System</h3>
+            <p>Complete automation suite for water businesses including order tracking, delivery management and analytics.</p>
+            <div class="video-container">
+                <video controls poster="screenshots/aquatrack-Front page.png">
+                    <source src="videos/aquatrack mobile app.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="project-slider-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="screenshots/aquatrack-Front page.png" alt="Front Page"></div>
+                    <div class="swiper-slide"><img src="screenshots/aquatrack -Dashboard.png" alt="Dashboard"></div>
+                    <div class="swiper-slide"><img src="screenshots/aquatrack-Screen UI.png" alt="UI"></div>
+                    <div class="swiper-slide"><img src="screenshots/aquatrack-login Page.png" alt="Login"></div>
+                    <div class="swiper-slide"><img src="screenshots/aquatrack-order track.png" alt="Tracking"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 
-<div class="video-container">
-<video controls poster="screenshots/aquatrack-Front page.png">
-<source src="videos/aquatrack mobile app.mp4" type="video/mp4">
-</video>
-</div>
-</div>
+    <section class="project-item reverse">
+        <div class="project-content">
+            <span class="tech-tag">Enterprise Web</span>
+            <h3>Admin Web Portal</h3>
+            <p>Advanced admin dashboard to manage orders, QR system, complaints and analytics dashboard for operational control.</p>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview" allow="autoplay" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="project-slider-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="screenshots/Admin Dashboard.png" alt="Admin Main"></div>
+                    <div class="swiper-slide"><img src="screenshots/web portal -orders.png" alt="Orders"></div>
+                    <div class="swiper-slide"><img src="screenshots/web portal -complaints.png" alt="Complaints"></div>
+                    <div class="swiper-slide"><img src="screenshots/web portal -QR Management.png" alt="QR"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 
-<div class="project-slider-container">
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><img src="screenshots/aquatrack-Front page.png"></div>
-<div class="swiper-slide"><img src="screenshots/aquatrack-Dashboard.png"></div>
-<div class="swiper-slide"><img src="screenshots/aquatrack-Screen UI.png"></div>
-<div class="swiper-slide"><img src="screenshots/aquatrack-login Page.png"></div>
-<div class="swiper-slide"><img src="screenshots/aquatrack-order track.png"></div>
-</div>
-<div class="swiper-pagination"></div>
-</div>
-</div>
-</section>
-
-<!-- PROJECT 2 -->
-<section class="project-item reverse">
-<div class="project-content">
-<span class="tech-tag">Enterprise Web</span>
-<h3>Admin Web Portal</h3>
-<p>Advanced admin dashboard to manage orders, QR system, complaints and analytics.</p>
-
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d/1zHVjfHZUD29Ks2zkqh-9LAJo5kXrO1-1/preview" allow="autoplay"></iframe>
-</div>
-</div>
-
-<div class="project-slider-container">
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><img src="screenshots/Admin Dashboard.png"></div>
-<div class="swiper-slide"><img src="screenshots/web portal -orders.png"></div>
-<div class="swiper-slide"><img src="screenshots/web portal -complaints.png"></div>
-<div class="swiper-slide"><img src="screenshots/web portal -QR Management.png"></div>
-</div>
-<div class="swiper-pagination"></div>
-</div>
-</div>
-</section>
-
-<!-- PROJECT 3 -->
-<section class="project-item">
-<div class="project-content">
-<span class="tech-tag">Mobile Utility</span>
-<h3>Solar Survey Mobile App</h3>
-<p>Field survey mobile app for solar planning, inspection and automated report generation.</p>
-</div>
-
-<div class="project-slider-container">
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><img src="screenshots/solar survey 1.png"></div>
-<div class="swiper-slide"><img src="screenshots/solar survey 2.png"></div>
-<div class="swiper-slide"><img src="screenshots/solar survey 3.png"></div>
-<div class="swiper-slide"><img src="screenshots/solar survey 4.png"></div>
-<div class="swiper-slide"><img src="screenshots/solar survey 5.png"></div>
-</div>
-<div class="swiper-pagination"></div>
-</div>
-</div>
-</section>
-
+    <section class="project-item">
+        <div class="project-content">
+            <span class="tech-tag">Mobile Utility</span>
+            <h3>Solar Survey Mobile App</h3>
+            <p>Field survey mobile app for solar planning, inspection and automated professional report generation.</p>
+        </div>
+        <div class="project-slider-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="screenshots/solar survey 1.png" alt="Survey 1"></div>
+                    <div class="swiper-slide"><img src="screenshots/solar survey 2.png" alt="Survey 2"></div>
+                    <div class="swiper-slide"><img src="screenshots/solar survey 3.png" alt="Survey 3"></div>
+                    <div class="swiper-slide"><img src="screenshots/solar survey 4.png" alt="Survey 4"></div>
+                    <div class="swiper-slide"><img src="screenshots/solar survey 5.png" alt="Survey 5"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
-<p>shagunbhatia98@gmail.com</p>
-<p>© 2026 Shagun Bhatia — Software Engineer</p>
+    <p>shagunbhatia98@gmail.com</p>
+    <p>© 2026 Shagun Bhatia — Software Engineer</p>
 </footer>
 
-<a href="https://wa.me/917067335518" class="whatsapp-fixed" target="_blank">Chat</a>
+<a href="https://wa.me/917067335518" class="whatsapp-fixed" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="20">
+    Chat with me
+</a>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
